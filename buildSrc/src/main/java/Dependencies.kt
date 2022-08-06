@@ -12,6 +12,7 @@ object Retrofit {
 object AndroidX {
     const val core = "androidx.core:core-ktx:${Versions.androidXCore}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
 }
 
 object Navigation {
@@ -22,4 +23,17 @@ object Navigation {
 object Dagger {
     const val core = "com.google.dagger:dagger:${Versions.dagger}"
     const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+}
+
+object JUnit {
+    const val core = "junit:junit:${Versions.jUnit}"
+    const val ext = "androidx.test.ext:junit:${Versions.jUnit}"
+}
+
+object Espresso {
+    const val core = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+}
+
+object Material {
+    const val core = "com.google.android.material:material:${Versions.material}"
 }
