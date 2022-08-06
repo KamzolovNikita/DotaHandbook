@@ -14,4 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Nikita"
 include ':app'
+include ':modules:celebrity:core:api'
+include ':modules:celebrity:core:impl'
+include ':modules:celebrity:core:factory'
 

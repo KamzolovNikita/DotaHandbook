@@ -1,15 +1,10 @@
-plugins {
-  id 'com.android.application'
-  id 'org.jetbrains.kotlin.android'
-}
-
 android {
-  compileSdk 32
+  compileSdk Versions.compileSdk
 
   defaultConfig {
-    applicationId "com.anti.toxic.nikita"
-    minSdk 23
-    targetSdk 32
+    minSdk Versions.minSdk
+    targetSdk Versions.targetSdk
+
     versionCode 1
     versionName "1.0"
 
@@ -29,14 +24,4 @@ android {
   kotlinOptions {
     jvmTarget = '1.8'
   }
-}
-
-dependencies {
-  implementation(AndroidX.core)
-  implementation(AndroidX.appCompat)
-  implementation(Material.core)
-  implementation(AndroidX.constraintLayout)
-  testImplementation(JUnit.core)
-  androidTestImplementation(JUnit.ext)
-  androidTestImplementation(Espresso.core)
 }
