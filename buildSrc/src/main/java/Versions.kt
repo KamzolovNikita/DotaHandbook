@@ -17,6 +17,7 @@ object Versions {
     const val androidXCore = "1.8.0"
     const val constraintLayout = "2.1.4"
     const val appCompat = "1.4.2"
+    const val fragment = "1.5.1"
 
 
     const val navigation = "2.5.1"

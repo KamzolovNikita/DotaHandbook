@@ -36,7 +36,13 @@ dependencies {
   implementation(AndroidX.appCompat)
   implementation(Material.core)
   implementation(AndroidX.constraintLayout)
+  implementation(project(Modules.activityContainer))
+  implementation(project(Modules.home))
+  implementation(project(Modules.signUp))
   testImplementation(JUnit.core)
   androidTestImplementation(JUnit.ext)
   androidTestImplementation(Espresso.core)
+  androidTestImplementation(Espresso.core)
+  implementation(Navigation.fragment)
+  implementation(Navigation.ui)
 }

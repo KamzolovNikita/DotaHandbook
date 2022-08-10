@@ -1,0 +1,18 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "$rootDir/default-settings.gradle"
+
+dependencies {
+  implementation(AndroidX.core)
+  implementation(AndroidX.appCompat)
+  implementation(AndroidX.constraintLayout)
+  implementation(Navigation.ui)
+  implementation(Navigation.fragment)
+  implementation(Dagger.compiler)
+  implementation(project(Modules.coreApi))
+  implementation(project(Modules.home))
+  implementation(project(Modules.signUp))
+}

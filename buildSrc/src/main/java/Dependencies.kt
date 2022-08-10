@@ -13,11 +13,12 @@ object AndroidX {
     const val core = "androidx.core:core-ktx:${Versions.androidXCore}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
 }
 
 object Navigation {
     const val ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
-    const val fragment = "androidx.navigation:navigation-fragment-ktx::${Versions.navigation}"
+    const val fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
 }
 
 object Dagger {

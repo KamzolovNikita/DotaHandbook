@@ -6,7 +6,6 @@ plugins {
 apply from: "$rootDir/default-settings.gradle"
 
 dependencies {
-  implementation(AndroidX.fragment)
-  implementation(Navigation.fragment)
   implementation(Navigation.ui)
+  implementation(Navigation.fragment)
 }
