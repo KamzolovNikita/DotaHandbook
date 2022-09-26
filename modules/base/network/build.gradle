@@ -1,0 +1,11 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+}
+apply from: "$rootDir/default-settings.gradle"
+
+dependencies {
+  implementation(AndroidX.fragment)
+  implementation(project(Modules.coreApi))
+}
+

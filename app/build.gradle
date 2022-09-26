@@ -1,6 +1,7 @@
 plugins {
   id 'com.android.application'
   id 'org.jetbrains.kotlin.android'
+  id 'kotlin-kapt'
 }
 
 android {
@@ -39,4 +40,31 @@ dependencies {
   testImplementation(JUnit.core)
   androidTestImplementation(JUnit.ext)
   androidTestImplementation(Espresso.core)
+  androidTestImplementation(Espresso.core)
+  implementation(Navigation.fragment)
+  implementation(Navigation.ui)
+  implementation(Dagger.core)
+  implementation(Retrofit.core)
+  implementation(Retrofit.kotlinXConverter)
+  implementation(Serialization.kotlinX)
+  implementation(Timber.core)
+  kapt Dagger.compiler
+
+
+  implementation(project(Modules.activityContainer))
+  implementation(project(Modules.onBoardingApi))
+  implementation(project(Modules.onBoardingImpl))
+  implementation(project(Modules.coreApi))
+  implementation(project(Modules.coreImpl))
+  implementation(project(Modules.coreFactory))
+  implementation(project(Modules.openDotaApi))
+  implementation(project(Modules.ui))
+  implementation(project(Modules.bottomNavigationContainerApi))
+  implementation(project(Modules.bottomNavigationContainerImpl))
+  implementation(project(Modules.splash))
+  implementation(project(Modules.home))
+  implementation(project(Modules.teams))
+  implementation(project(Modules.heroes))
+  implementation(project(Modules.inDota))
+  implementation(project(Modules.databases))
 }

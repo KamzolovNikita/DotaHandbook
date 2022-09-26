@@ -5,3 +5,7 @@ plugins {
 }
 apply from: "$rootDir/default-settings.gradle"
 
+dependencies {
+  implementation(project(Modules.coreImpl))
+  implementation(project(Modules.coreApi))
+}

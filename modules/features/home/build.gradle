@@ -1,0 +1,12 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+}
+apply from: "$rootDir/default-settings.gradle"
+
+dependencies {
+  implementation(Navigation.fragment)
+  implementation(Navigation.ui)
+  implementation(Material.core)
+  implementation(project(Modules.ui))
+}

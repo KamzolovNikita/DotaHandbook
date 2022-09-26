@@ -1,0 +1,14 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+  id 'androidx.navigation.safeargs.kotlin'
+}
+apply from: "$rootDir/default-settings.gradle"
+
+dependencies {
+  implementation(AndroidX.fragment)
+  implementation(Navigation.ui)
+  implementation(Navigation.fragment)
+  implementation(project(Modules.onBoardingApi))
+  implementation(Dagger.core)
+}

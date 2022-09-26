@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_on_boarding"
+    app:startDestination="@id/onBoardingFirst">
+
+  <action
+      android:id="@+id/action_global_to_onBoarding"
+      app:destination="@+id/onBoardingFirst" />
+
+  <fragment
+      android:id="@+id/onBoardingFirst"
+      android:name="com.anti_toxic.dota.on_boarding.OnBoardingFragment"
+      android:label="OnBoardingFirst">
+  </fragment>
+</navigation>

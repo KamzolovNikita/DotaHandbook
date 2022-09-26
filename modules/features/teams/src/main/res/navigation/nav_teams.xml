@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/teams"
+    app:startDestination="@id/teams_fragment">
+
+  <fragment
+      android:id="@+id/teams_fragment"
+      android:name="com.anti_toxic.dota.teams.list.TeamsListFragment"
+      android:label="Teams">
+  </fragment>
+
+</navigation>

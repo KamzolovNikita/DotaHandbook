@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="team_ranking_placeholder">#%1$d</string>
+  <string name="team_rating_placeholder">rating: %1$s</string>
+  <string name="error_loading_data">Failed to update data</string>
+</resources>
