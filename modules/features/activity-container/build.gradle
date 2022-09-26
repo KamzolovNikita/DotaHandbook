@@ -1,6 +1,8 @@
 plugins {
   id 'com.android.library'
   id 'org.jetbrains.kotlin.android'
+  id 'androidx.navigation.safeargs.kotlin'
+  id 'kotlin-kapt'
 }
 
 apply from: "$rootDir/default-settings.gradle"
@@ -11,8 +13,11 @@ dependencies {
   implementation(AndroidX.constraintLayout)
   implementation(Navigation.ui)
   implementation(Navigation.fragment)
-  implementation(Dagger.compiler)
+  kapt Dagger.compiler
+  implementation(Dagger.core)
+  implementation(OkHttp.core)
   implementation(project(Modules.coreApi))
-  implementation(project(Modules.home))
-  implementation(project(Modules.signUp))
+  implementation(project(Modules.onBoardingApi))
+  implementation(project(Modules.bottomNavigationContainerApi))
+  implementation(project(Modules.openDotaApi))
 }

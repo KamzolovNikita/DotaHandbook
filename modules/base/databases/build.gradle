@@ -1,0 +1,17 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+  id 'kotlin-kapt'
+  id 'kotlinx-serialization'
+}
+apply from: "$rootDir/default-settings.gradle"
+
+dependencies {
+  implementation(project(Modules.coreApi))
+  implementation(Dagger.core)
+  kapt Room.compiler
+  kapt Dagger.compiler
+  implementation(Room.core)
+  implementation(Room.coroutines)
+}
+

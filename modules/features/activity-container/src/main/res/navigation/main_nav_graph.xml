@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_splash">
+
+  <action
+      android:id="@+id/action_global_to_splash"
+      app:destination="@+id/nav_splash"
+      app:enterAnim="@android:anim/fade_in"
+      app:exitAnim="@android:anim/fade_out"
+      app:popEnterAnim="@android:anim/fade_in"
+      app:popExitAnim="@android:anim/fade_out" />
+
+  <action
+      android:id="@+id/action_global_to_on_boarding"
+      app:destination="@+id/nav_on_boarding"
+      app:enterAnim="@android:anim/fade_in"
+      app:exitAnim="@android:anim/fade_out"
+      app:popEnterAnim="@android:anim/fade_in"
+      app:popExitAnim="@android:anim/fade_out" />
+
+  <action
+      android:id="@+id/action_global_to_main_screen"
+      app:destination="@+id/nav_main_screen"
+      app:enterAnim="@android:anim/fade_in"
+      app:exitAnim="@android:anim/fade_out"
+      app:popUpTo="@id/nav_main" />
+
+  <include
+      android:id="@+id/nav_splash"
+      app:graph="@navigation/nav_splash" />
+
+  <include
+      android:id="@+id/nav_on_boarding"
+      app:graph="@navigation/nav_on_boarding" />
+
+  <include
+      android:id="@+id/nav_main_screen"
+      app:graph="@navigation/main_screen_nav_graph" />
+</navigation>

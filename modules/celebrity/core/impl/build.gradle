@@ -1,6 +1,14 @@
 plugins {
   id 'com.android.library'
   id 'org.jetbrains.kotlin.android'
+  id 'kotlin-kapt'
 }
 apply from: "$rootDir/default-settings.gradle"
 
+dependencies {
+  implementation(Dagger.core)
+  implementation(project(Modules.coreApi))
+  implementation(OkHttp.core)
+  implementation(Serialization.kotlinX)
+  kapt Dagger.compiler
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".list.TeamsListFragment"
+    >
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teams_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layoutManager="LinearLayoutManager"
+        />
+
+    <include
+        layout="@layout/gradient_progress_bar"
+        android:id="@+id/progress_bar"
+        android:visibility="visible"
+        />
+
+    <include
+        layout="@layout/error_layout"
+        android:id="@+id/error"
+        android:visibility="invisible"
+        />
+  </FrameLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

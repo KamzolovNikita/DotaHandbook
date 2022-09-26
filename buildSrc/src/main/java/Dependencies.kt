@@ -14,6 +14,7 @@ object AndroidX {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
 }
 
 object Navigation {
@@ -37,4 +38,27 @@ object Espresso {
 
 object Material {
     const val core = "com.google.android.material:material:${Versions.material}"
+}
+
+object Serialization {
+    const val kotlinX = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinXSerialization}"
+}
+
+object OkHttp {
+    const val core = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
+}
+
+object Glide {
+    const val core = "com.github.bumptech.glide:glide:${Versions.glide}"
+}
+
+object Room {
+    const val core = "androidx.room:room-runtime:${Versions.room}"
+    const val compiler = "androidx.room:room-compiler:${Versions.room}"
+    const val coroutines = "androidx.room:room-ktx:${Versions.room}"
+    const val test = "androidx.room:room-testing:${Versions.room}"
+}
+
+object Timber {
+    const val core = "com.jakewharton.timber:timber:${Versions.timber}"
 }

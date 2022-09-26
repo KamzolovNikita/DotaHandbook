@@ -1,0 +1,21 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+  id 'androidx.navigation.safeargs.kotlin'
+  id 'kotlin-kapt'
+}
+apply from: "$rootDir/default-settings.gradle"
+
+dependencies {
+  implementation(AndroidX.fragment)
+  implementation(Navigation.ui)
+  implementation(Navigation.fragment)
+  implementation(project(Modules.onBoardingApi))
+  implementation(project(Modules.coreApi))
+  implementation(project(Modules.openDotaApi))
+  implementation(project(Modules.bottomNavigationContainerApi))
+  implementation(Dagger.core)
+  implementation(Coroutines.viewModelKtx)
+  implementation(Coroutines.core)
+  kapt Dagger.compiler
+}
