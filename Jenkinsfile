@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'kamzolovn/otus_last:latest'
+            image 'kamzolovn/otus_end:latest'
             args '-it --memory=12g --cpus="4" -u root'
         }
     }
