@@ -1,3 +1,5 @@
+import io.gitlab.arturbosch.detekt.Detekt
+
 buildscript {
   repositories {
     google()
@@ -12,6 +14,22 @@ buildscript {
 
 allprojects {
   apply plugin: "io.gitlab.arturbosch.detekt"
+}
+
+task detektAll(type: Detekt) {
+  description = "Custom DETEKT build for all modules"
+  parallel = true
+  ignoreFailures = true
+  buildUponDefaultConfig = true
+  setSource(file(projectDir))
+  config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
+  include("**/*.kt")
+  exclude("**/resources/**", "**/build/**")
+  reports {
+    html.enabled = true
+    xml.enabled = false
+    txt.enabled = false
+  }
 }
 
 task clean(type: Delete) {
