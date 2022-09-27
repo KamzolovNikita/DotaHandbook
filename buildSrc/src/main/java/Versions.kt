@@ -41,4 +41,6 @@ object Versions {
     const val room = "2.4.3"
 
     const val timber = "5.0.1"
+
+    const val detekt = "1.18.1"
 }

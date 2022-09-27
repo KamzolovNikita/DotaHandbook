@@ -9,6 +9,11 @@ buildscript {
     }
   }
 }
+
+allprojects {
+  apply plugin: "io.gitlab.arturbosch.detekt"
+}
+
 task clean(type: Delete) {
   delete rootProject.buildDir
 }
