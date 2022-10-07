@@ -1,6 +1,7 @@
 package com.anti_toxic.dota.core_api.di
 
 import android.content.Context
+import android.content.res.Resources
 import com.anti_toxic.dota.core_api.AppDispatchers
 import com.anti_toxic.dota.core_api.PreferencesProvider
 import kotlinx.serialization.json.Json
@@ -18,4 +19,6 @@ interface CoreProvider {
     fun provideOkHttpClient(): OkHttpClient
 
     fun provideAppDispatchers(): AppDispatchers
+
+    fun providerResources(): Resources
 }

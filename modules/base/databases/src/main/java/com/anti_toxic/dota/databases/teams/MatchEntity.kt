@@ -10,9 +10,9 @@ import com.anti_toxic.dota.databases.SideEnumTypeConverter
 @Entity(tableName = "matches")
 data class MatchEntity(
     @ColumnInfo(name = "match_id")
-    val matchId: Int,
+    val matchId: Long,
     @ColumnInfo(name = "duration")
-    val duration: Int,
+    val duration: Long,
     @ColumnInfo(name = "start_time")
     val startTime: Long,
     @ColumnInfo(name = "opposing_team_name")

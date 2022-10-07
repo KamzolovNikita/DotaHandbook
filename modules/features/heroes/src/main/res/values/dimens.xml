@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="hero_item_width">106dp</dimen>
+  <dimen name="hero_item_height">60dp</dimen>
+  <dimen name="selector_height">50dp</dimen>
+  <dimen name="selector_dialog_btn_height">60dp</dimen>
+</resources>

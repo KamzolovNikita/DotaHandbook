@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/small_margin"
+    android:paddingTop="@dimen/small_margin"
+    >
+
+  <TextView
+      android:id="@+id/dialog_header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:textSize="@dimen/large_text"
+      android:textColor="@color/primaryTextColor"
+      android:text="Choose filter params"
+      />
+
+
+
+  <Spinner
+      android:id="@+id/role_dropdown"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/selector_height"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:layout_marginStart="@dimen/small_margin"
+      android:background="@drawable/red_outline"
+      android:popupBackground="@drawable/red_outline_with_background"
+      android:spinnerMode="dropdown"
+      android:layout_marginTop="@dimen/small_margin"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/dialog_header"
+      />
+
+  <Spinner
+      android:id="@+id/attack_type_dropdown"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/selector_height"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginTop="@dimen/medium_margin"
+      android:background="@drawable/red_outline"
+      android:popupBackground="@drawable/red_outline_with_background"
+      android:spinnerMode="dropdown"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/role_dropdown"
+      />
+
+
+  <Spinner
+      android:id="@+id/primary_attr_dropdown"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/selector_height"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginTop="@dimen/medium_margin"
+      android:background="@drawable/red_outline"
+      android:popupBackground="@drawable/red_outline_with_background"
+      android:spinnerMode="dropdown"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/attack_type_dropdown"
+      />
+
+  <Button
+      android:id="@+id/clear_selection_btn"
+      android:layout_width="0dp"
+      android:layout_height="@dimen/selector_dialog_btn_height"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginTop="@dimen/medium_margin"
+      android:backgroundTint="@color/primaryLightColor"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/submit_selection_btn"
+      app:layout_constraintTop_toBottomOf="@id/primary_attr_dropdown"
+      android:text="@string/btn_clear_selection"
+      android:textAllCaps="false"
+      android:textColor="@color/primaryTextColor"
+      />
+
+  <Button
+      android:id="@+id/submit_selection_btn"
+      android:layout_width="0dp"
+      android:layout_height="@dimen/selector_dialog_btn_height"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginTop="16dp"
+      android:alpha="0.5"
+      android:enabled="false"
+      android:backgroundTint="@color/secondaryColor"
+      android:text="@string/btn_submit_selection"
+      android:textAllCaps="false"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:textColor="@color/primaryTextColor"
+      app:layout_constraintStart_toEndOf="@id/clear_selection_btn"
+      app:layout_constraintTop_toBottomOf="@id/primary_attr_dropdown"
+      app:layout_constraintEnd_toEndOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

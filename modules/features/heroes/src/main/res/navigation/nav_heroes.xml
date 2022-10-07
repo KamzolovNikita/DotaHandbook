@@ -6,7 +6,7 @@
 
   <fragment
       android:id="@+id/heroes_fragment"
-      android:name="com.anti_toxic.dota.heroes.HeroesFragment"
+      android:name="com.anti_toxic.dota.heroes.list.HeroesListFragment"
       android:label="Heroes">
   </fragment>
 

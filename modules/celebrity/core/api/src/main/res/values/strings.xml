@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="attack_type_melee">Melee</string>
+  <string name="attack_type_ranged">Ranged</string>
+  <string name="attribute_agility">Agility</string>
+  <string name="attribute_strength">Strength</string>
+  <string name="attribute_intelligence">Intelligence</string>
+  <string name="role_carry">Carry</string>
+  <string name="role_escape">Escape</string>
+  <string name="role_nuker">Nuker</string>
+  <string name="role_pusher">Pusher</string>
+  <string name="role_disabler">Disabler</string>
+  <string name="role_initiator">Initiator</string>
+  <string name="role_jungler">Jungler</string>
+  <string name="role_support">Support</string>
+  <string name="role_durable">Durable</string>
+  <string name="error_loading_data">Failed to update data</string>
+  <string name="error_loading_data_short">Load failed</string>
+</resources>

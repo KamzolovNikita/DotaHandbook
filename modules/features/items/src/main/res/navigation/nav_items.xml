@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/items"
+    app:startDestination="@id/items_list_fragment">
+
+  <fragment
+      android:id="@+id/items_list_fragment"
+      android:name="com.anti_toxic.dota.items.list.ItemsListFragment"
+      android:label="ItemsList">
+    <action
+        android:id="@+id/action_items_list_fragment_to_item_info_fragment"
+        app:destination="@id/item_info_fragment"
+        app:popUpTo="@id/items_list_fragment"
+        app:popUpToInclusive="false" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/item_info_fragment"
+      android:name="com.anti_toxic.dota.items.info.ItemInfoFragment"
+      android:label="ItemInfo">
+    <argument
+        android:name="item"
+        app:argType="com.anti_toxic.dota.items.list.data_source.Item" />
+  </fragment>
+
+</navigation>

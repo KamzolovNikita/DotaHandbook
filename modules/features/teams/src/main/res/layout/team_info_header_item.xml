@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/primaryDarkColor"
+    >
+
+  <TextView
+      android:id="@+id/header_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/small_margin"
+      android:textSize="@dimen/large_text"
+      android:layout_gravity="start|center"
+      android:textColor="@color/secondaryColor"
+      tools:text="Matches"
+      />
+
+  <include
+      layout="@layout/gradient_progress_bar"
+      android:id="@+id/progress_bar"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_gravity="center|end"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:visibility="invisible"
+      />
+
+
+  <TextView
+      android:id="@+id/error"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|end"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:textSize="@dimen/medium_text"
+      android:visibility="visible"
+      android:textColor="@color/secondaryColor"
+      android:text="@string/error_loading_data_short"
+      />
+
+</FrameLayout>

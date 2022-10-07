@@ -2,9 +2,12 @@ package com.anti_toxic.dota.teams.list
 
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.anti_toxic.dota.core_api.Resource.Empty
 import com.anti_toxic.dota.core_api.Resource.Error
 import com.anti_toxic.dota.core_api.Resource.Loading
@@ -16,6 +19,9 @@ import com.anti_toxic.dota.open_dota_api.OpenDotaApiServiceProvider
 import com.anti_toxic.dota.teams.DaggerTeamsComponent
 import com.anti_toxic.dota.teams.databinding.FragmentTeamsListBinding
 import com.anti_toxic.dota.teams.list.TeamsListViewModel.Event
+import com.anti_toxic.dota.teams.list.data_source.Team
+import com.anti_toxic.dota.teams.list.recycler.TeamClickListener
+import com.anti_toxic.dota.teams.list.recycler.TeamsListAdapter
 import com.anti_toxic.dota.ui.R
 import com.anti_toxic.dota.ui.ViewBindingFragment
 import com.google.android.material.snackbar.Snackbar
@@ -28,14 +34,16 @@ class TeamsListFragment
     @Inject
     lateinit var viewModelFactory: TeamsListViewModelFactory
 
-    @Inject
-    lateinit var adapter: TeamsListAdapter
+    private val adapter = TeamsListAdapter(
+        TeamClickListener(this::navigateTeamInfoFragment)
+    )
 
     private lateinit var viewModel: TeamsListViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val componentProvider = activity as ComponentProvider
+
         DaggerTeamsComponent.factory().create(
             componentProvider.provide(CoreProvider::class.java),
             componentProvider.provide(OpenDotaApiServiceProvider::class.java),
@@ -49,10 +57,10 @@ class TeamsListFragment
 
         initViews()
 
-        lifecycleScope.launchWhenCreated {
+        lifecycleScope.launchWhenStarted {
             collectOneShotEvents()
         }
-        lifecycleScope.launchWhenCreated {
+        lifecycleScope.launchWhenStarted {
             collectTeamsListResponse()
         }
     }
@@ -70,6 +78,15 @@ class TeamsListFragment
         viewBinding.swipeRefreshLayout.setOnRefreshListener(viewModel)
 
         val recyclerView = viewBinding.teamsRecycler
+        val dividerItemDecoration = DividerItemDecoration(
+            recyclerView.context,
+            LinearLayout.VERTICAL
+        )
+        dividerItemDecoration.setDrawable(resources.getDrawable(
+            R.drawable.recycler_divider,
+            context?.theme
+        ))
+        recyclerView.addItemDecoration(dividerItemDecoration)
         recyclerView.adapter = adapter
         recyclerView.itemAnimator = DefaultItemAnimator()
     }
@@ -110,5 +127,11 @@ class TeamsListFragment
                 }
             }
         }
+    }
+
+    private fun navigateTeamInfoFragment(team: Team) {
+        findNavController().navigate(
+            TeamsListFragmentDirections.actionTeamsFragmentToTeamInfoFragment(team)
+        )
     }
 }

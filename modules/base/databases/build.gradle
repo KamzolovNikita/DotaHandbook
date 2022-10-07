@@ -12,6 +12,7 @@ dependencies {
   kapt Room.compiler
   kapt Dagger.compiler
   implementation(Room.core)
+  implementation(Serialization.kotlinX)
   implementation(Room.coroutines)
 }
 

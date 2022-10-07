@@ -31,6 +31,9 @@ android {
         "-Xjvm-default=all",
     ]
   }
+  lintOptions {
+    ignore("UseCompatLoadingForDrawables")
+  }
 }
 
 dependencies {

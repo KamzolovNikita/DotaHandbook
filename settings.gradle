@@ -12,7 +12,7 @@ dependencyResolutionManagement {
     mavenCentral()
   }
 }
-rootProject.name = "Nikita"
+rootProject.name = "DotaApp"
 include ':app'
 
 //celebrity
@@ -25,17 +25,14 @@ include ':modules:features:activity-container'
 
 include ':modules:features:splash'
 
-include ':modules:features:on_boarding:api'
-include ':modules:features:on_boarding:impl'
-
 include ':modules:features:bottom-navigation-container:api'
 include ':modules:features:bottom-navigation-container:impl'
 
-include ':modules:features:home'
 include ':modules:features:teams'
 include ':modules:features:in_dota'
 
 include ':modules:features:heroes'
+include ':modules:features:items'
 
 //base
 include ':modules:base:open_dota_api'

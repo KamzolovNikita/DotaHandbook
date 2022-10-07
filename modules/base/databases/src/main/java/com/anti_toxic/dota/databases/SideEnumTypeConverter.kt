@@ -9,5 +9,5 @@ class SideEnumTypeConverter {
     fun toSide(value: String) = enumValueOf<Side>(value)
 
     @TypeConverter
-    fun fromHealth(value: Side) = value.name
+    fun fromSide(value: Side) = value.name
 }

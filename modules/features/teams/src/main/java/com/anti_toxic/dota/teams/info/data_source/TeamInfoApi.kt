@@ -9,4 +9,6 @@ class TeamInfoApi @Inject constructor(
     suspend fun getPlayers(teamId: Int) = openDotaApiService.getPlayers(teamId)
 
     suspend fun getMatches(teamId: Int) = openDotaApiService.getMatches(teamId)
+
+    suspend fun getTeam(teamId: Int) = openDotaApiService.getTeam(teamId)
 }

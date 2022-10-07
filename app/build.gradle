@@ -52,8 +52,6 @@ dependencies {
 
 
   implementation(project(Modules.activityContainer))
-  implementation(project(Modules.onBoardingApi))
-  implementation(project(Modules.onBoardingImpl))
   implementation(project(Modules.coreApi))
   implementation(project(Modules.coreImpl))
   implementation(project(Modules.coreFactory))
@@ -62,9 +60,9 @@ dependencies {
   implementation(project(Modules.bottomNavigationContainerApi))
   implementation(project(Modules.bottomNavigationContainerImpl))
   implementation(project(Modules.splash))
-  implementation(project(Modules.home))
   implementation(project(Modules.teams))
   implementation(project(Modules.heroes))
+  implementation(project(Modules.items))
   implementation(project(Modules.inDota))
   implementation(project(Modules.databases))
 }

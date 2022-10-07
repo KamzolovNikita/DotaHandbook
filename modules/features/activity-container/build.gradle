@@ -17,7 +17,6 @@ dependencies {
   implementation(Dagger.core)
   implementation(OkHttp.core)
   implementation(project(Modules.coreApi))
-  implementation(project(Modules.onBoardingApi))
   implementation(project(Modules.bottomNavigationContainerApi))
   implementation(project(Modules.openDotaApi))
 }

@@ -10,7 +10,6 @@ dependencies {
   implementation(AndroidX.fragment)
   implementation(Navigation.ui)
   implementation(Navigation.fragment)
-  implementation(project(Modules.onBoardingApi))
   implementation(project(Modules.coreApi))
   implementation(project(Modules.openDotaApi))
   implementation(project(Modules.bottomNavigationContainerApi))

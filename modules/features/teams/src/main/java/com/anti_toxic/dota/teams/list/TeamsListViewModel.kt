@@ -1,20 +1,19 @@
 package com.anti_toxic.dota.teams.list
 
-import android.content.Context
+import android.content.res.Resources
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.anti_toxic.dota.core_api.OneShotEvent
+import com.anti_toxic.dota.core_api.R
 import com.anti_toxic.dota.core_api.Resource
 import com.anti_toxic.dota.core_api.Resource.Empty
 import com.anti_toxic.dota.core_api.Resource.Error
 import com.anti_toxic.dota.core_api.Resource.Loading
 import com.anti_toxic.dota.core_api.Resource.Success
-import com.anti_toxic.dota.core_api.di.ApplicationContext
-import com.anti_toxic.dota.open_dota_api.dto.Team
-import com.anti_toxic.dota.teams.R
 import com.anti_toxic.dota.teams.list.TeamsListViewModel.Event.RefreshEnded
 import com.anti_toxic.dota.teams.list.TeamsListViewModel.Event.ShowSnackbar
+import com.anti_toxic.dota.teams.list.data_source.Team
 import com.anti_toxic.dota.teams.list.data_source.TeamsListRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
@@ -26,10 +25,8 @@ import kotlinx.coroutines.launch
 
 class TeamsListViewModel(
     private val repository: TeamsListRepository,
-    @ApplicationContext context: Context
+    private val resources: Resources
 ) : ViewModel(), OnRefreshListener {
-
-    private val resources = context.resources
 
     sealed class Event {
         class ShowSnackbar(val text: String) : Event()

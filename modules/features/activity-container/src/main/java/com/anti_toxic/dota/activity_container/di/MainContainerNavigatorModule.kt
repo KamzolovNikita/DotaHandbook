@@ -5,7 +5,6 @@ import com.anti_toxic.dota.activity_container.MainContainerNavigator
 import com.anti_toxic.dota.core_api.di.ActivityScope
 import com.anti_toxic.dota.core_api.di.FeatureMediator
 import com.anti_toxic.dota.main.MainScreenMediator
-import com.anti_toxic.dota.on_boarding.OnBoardingMediator
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -22,11 +21,6 @@ interface MainContainerNavigatorModule {
             return MainContainerNavigator(navController)
         }
     }
-
-    @Binds
-    @IntoMap
-    @ClassKey(OnBoardingMediator::class)
-    fun putOnBoardingMediator(mainContainerNavigator: MainContainerNavigator): FeatureMediator
 
     @Binds
     @IntoMap

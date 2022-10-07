@@ -1,10 +1,26 @@
 plugins {
   id 'com.android.library'
   id 'org.jetbrains.kotlin.android'
+  id 'androidx.navigation.safeargs.kotlin'
+  id 'kotlinx-serialization'
+  id 'kotlin-kapt'
 }
 apply from: "$rootDir/default-settings.gradle"
 
 dependencies {
+  implementation(AndroidX.core)
   implementation(Navigation.fragment)
   implementation(Navigation.ui)
+  implementation(AndroidX.swipeRefreshLayout)
+  implementation(Dagger.core)
+  kapt Dagger.compiler
+  implementation(project(Modules.ui))
+  implementation(project(Modules.coreApi))
+  implementation(Serialization.kotlinX)
+  implementation(project(Modules.network))
+  implementation(project(Modules.databases))
+  implementation(project(Modules.openDotaApi))
+  implementation(OkHttp.core)
+  implementation(Room.core)
+  implementation(Glide.core)
 }

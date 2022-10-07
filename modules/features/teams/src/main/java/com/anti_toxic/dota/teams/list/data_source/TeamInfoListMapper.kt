@@ -2,16 +2,13 @@ package com.anti_toxic.dota.teams.list.data_source
 
 import com.anti_toxic.dota.databases.teams.TeamEntity
 import com.anti_toxic.dota.network.Mapper
-import com.anti_toxic.dota.open_dota_api.dto.Team
-import dagger.Reusable
-import javax.inject.Inject
+import com.anti_toxic.dota.open_dota_api.dto.TeamDto
 
-@Reusable
-class TeamInfoListMapper @Inject constructor(): Mapper<List<Team>, List<TeamEntity>> {
+object TeamInfoListMapper : Mapper<List<TeamDto>, List<TeamEntity>, List<Team>> {
 
-    override fun toEntity(value: List<Team>): List<TeamEntity> {
-        return value.map {
-            TeamEntity(
+    override fun entityToDomain(entity: List<TeamEntity>): List<Team> {
+        return entity.map {
+            Team(
                 teamId = it.teamId,
                 rating = it.rating,
                 wins = it.wins,
@@ -22,9 +19,22 @@ class TeamInfoListMapper @Inject constructor(): Mapper<List<Team>, List<TeamEnti
         }
     }
 
-    override fun toDomain(value: List<TeamEntity>): List<Team> {
-        return value.map {
+    override fun dtoToDomain(dto: List<TeamDto>): List<Team> {
+        return dto.map {
             Team(
+                teamId = it.teamId,
+                rating = it.rating,
+                wins = it.wins,
+                losses = it.losses,
+                name = it.name,
+                logoUrl = it.logoUrl
+            )
+        }
+    }
+
+    override fun dtoToEntity(dto: List<TeamDto>): List<TeamEntity> {
+        return dto.map {
+            TeamEntity(
                 teamId = it.teamId,
                 rating = it.rating,
                 wins = it.wins,

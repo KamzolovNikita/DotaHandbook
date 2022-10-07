@@ -8,4 +8,6 @@
   <color name="secondaryDarkColor">#530000</color>
   <color name="primaryTextColor">#ffffff</color>
   <color name="secondaryTextColor">#161414</color>
+  <color name="redLose">#A30000</color>
+  <color name="greenWin">#0E9705</color>
 </resources>

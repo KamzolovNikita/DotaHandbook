@@ -1,8 +1,10 @@
 package com.anti_toxic.dota.network
 
-interface Mapper<Domain, Entity> {
+interface Mapper<Dto, Entity, Domain> {
 
-    fun toEntity(value: Domain): Entity
+    fun entityToDomain(entity: Entity): Domain
 
-    fun toDomain(value: Entity): Domain
+    fun dtoToDomain(dto: Dto): Domain
+
+    fun dtoToEntity(dto: Dto): Entity
 }

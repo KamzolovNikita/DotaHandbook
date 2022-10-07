@@ -9,7 +9,7 @@
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="An error occurred"
+      android:text="@string/error_text"
       android:textSize="@dimen/medium_text"
       />
 
@@ -19,6 +19,7 @@
       android:layout_height="50dp"
       android:layout_gravity="center"
       android:textSize="@dimen/medium_text"
-      android:text="Retry"
+      android:textAllCaps="false"
+      android:text="@string/retry_button_text"
       style="@style/Widget.App.Button.OutlinedButton"/>
 </LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".info.ItemInfoFragment"
+    >
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/heroes_recycler"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:paddingBottom="@dimen/medium_margin"
+      />
+
+  <include
+      layout="@layout/gradient_progress_bar"
+      android:id="@+id/progress_bar"
+      android:visibility="invisible"
+      />
+
+  <include
+      layout="@layout/error_layout"
+      android:id="@+id/error"
+      android:visibility="invisible"
+      />
+
+</FrameLayout>

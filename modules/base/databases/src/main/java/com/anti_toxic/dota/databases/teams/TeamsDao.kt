@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
+import androidx.room.Update
 import com.anti_toxic.dota.core_api.Constants
 
 @Dao
@@ -13,13 +14,19 @@ abstract class TeamsDao {
     @Query("SELECT * FROM teams ORDER BY rating DESC")
     abstract suspend fun getAllTeams(): List<TeamEntity>
 
-    @Transaction
-    @Query("SELECT * FROM players WHERE account_id IN (SELECT account_id FROM team_with_players WHERE team_id=:id)")
-    abstract suspend fun getPlayersOfTeamById(id: Int): List<PlayerEntity>
+    @Query("SELECT * from teams WHERE team_id=:teamId")
+    abstract suspend fun getTeam(teamId: Int): TeamEntity
 
     @Transaction
-    @Query("SELECT * FROM matches WHERE match_key IN (SELECT match_key FROM team_with_matches WHERE team_id=:id)")
-    abstract suspend fun getMatchesOfTeamById(id: Int): List<MatchEntity>
+    @Query("SELECT * FROM players WHERE account_id IN (SELECT account_id FROM team_with_players WHERE team_id=:teamId)")
+    abstract suspend fun getPlayersOfTeamById(teamId: Int): List<PlayerEntity>
+
+    @Transaction
+    @Query("SELECT * FROM matches WHERE match_key IN (SELECT match_key FROM team_with_matches WHERE team_id=:teamId)")
+    abstract suspend fun getMatchesOfTeamById(teamId: Int): List<MatchEntity>
+
+    @Update
+    abstract suspend fun updateTeam(team: TeamEntity)
 
     suspend fun updateTeamsData(teams: List<TeamEntity>) {
         insertAllTeams(teams)

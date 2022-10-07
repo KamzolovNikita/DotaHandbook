@@ -9,13 +9,10 @@ import androidx.lifecycle.lifecycleScope
 import com.anti_toxic.dota.core_api.di.ComponentProvider
 import com.anti_toxic.dota.core_api.di.ContainerActivityProvider
 import com.anti_toxic.dota.main.MainScreenMediator
-import com.anti_toxic.dota.on_boarding.OnBoardingMediator
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 class SplashFragment : Fragment() {
-    @Inject
-    lateinit var onBoardingMediator: OnBoardingMediator
 
     @Inject
     lateinit var mainScreenMediator: MainScreenMediator

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="team_ranking_placeholder">#%1$d</string>
-  <string name="team_rating_placeholder">rating: %1$s</string>
-  <string name="error_loading_data">Failed to update data</string>
+  <string name="team_rating_placeholder">Rating: %1$s</string>
+  <string name="header_last_matches">Last matches</string>
+  <string name="header_players">Players</string>
+  <string name="side_placeholder">Side: %1$s</string>
+  <string name="match_duration_placeholder">Duration: %1$s:%2$s</string>
+  <string name="winrate_placeholder">WinRate: %1$s\%%</string>
+  <string name="player_games_placeholder">Games: %1$d</string>
+  <string name="win_text">WIN</string>
+  <string name="lose_text">LOSE</string>
 </resources>

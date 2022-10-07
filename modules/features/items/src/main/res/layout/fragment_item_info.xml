@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:background="@color/primaryColor"
+    tools:context=".info.ItemInfoFragment"
+    >
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="125dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_dota"
+        tools:tint="@color/secondaryColor"
+        />
+
+    <LinearLayout
+        android:id="@+id/price_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+      <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:src="@drawable/ic_coins"
+          />
+
+      <TextView
+          android:id="@+id/price"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/small_margin"
+          android:textColor="@color/primaryTextColor"
+          tools:text="5040"
+          />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/cooldown_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/price_group"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+      <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:src="@drawable/ic_cooldown"
+          />
+
+      <TextView
+          android:id="@+id/cooldown"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/small_margin"
+          android:textColor="@color/primaryTextColor"
+          tools:text="5040"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/secondaryColor"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Veil of Discord"
+        />
+
+    <TextView
+        android:id="@+id/lore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/small_text"
+        android:alpha="0.65"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@id/price_group"
+        tools:text="Not one thrall creature of the depths,\nNor spirit bound in drowning's keep,\nNor Maelrawn the Tentacular,\r\nShall rest till seas, gem comes to sleep."
+        />
+
+    <TextView
+        android:id="@+id/hints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:ellipsize="end"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="1. Not one thrall creature of the depths,\nNor spirit bound in drowning's keep,\nNor Maelrawn the Tentacular,\r\nShall rest till seas, gem comes to sleep."
+        />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

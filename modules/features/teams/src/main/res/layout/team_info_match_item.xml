@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    tools:background="@color/primaryColor"
+    >
+
+  <TextView
+      android:id="@+id/opposite_team_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginTop="@dimen/small_margin"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="@dimen/medium_text"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="TeamSpirit"
+      />
+
+  <TextView
+      android:id="@+id/win_or_lose_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/large_text"
+      app:layout_constraintBottom_toTopOf="@+id/league_name"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:text="LOSE"
+      tools:textColor="@color/redLose"
+      />
+
+  <TextView
+      android:id="@+id/league_name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:layout_marginStart="@dimen/small_margin"
+      android:ellipsize="end"
+      android:gravity="center"
+      android:maxLines="1"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="@dimen/small_text"
+      app:layout_constraintBottom_toTopOf="@+id/start_time"
+      app:layout_constraintEnd_toStartOf="@id/guideline"
+      app:layout_constraintStart_toEndOf="@id/opposite_team_logo"
+      tools:text="PGL Arlington Major"
+      />
+
+  <TextView
+      android:id="@+id/start_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/small_margin"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="@dimen/small_text"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/guideline"
+      app:layout_constraintStart_toEndOf="@+id/opposite_team_logo"
+      tools:text="13.05.2022"
+      />
+
+  <TextView
+      android:id="@+id/side"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:layout_marginTop="@dimen/small_margin"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="@dimen/small_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Side: Radiant"
+      />
+
+  <TextView
+      android:id="@+id/duration"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/small_margin"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="@dimen/small_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/side"
+      tools:text="Duration: 13:00"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/opposite_team_logo"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:layout_marginStart="@dimen/small_margin"
+      android:layout_marginTop="@dimen/small_margin"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/opposite_team_name"
+      tools:src="@drawable/ic_team"
+      tools:tint="@color/secondaryDarkColor"
+      />
+  <!--Поправить бы margin) -->
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_end="78dp"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

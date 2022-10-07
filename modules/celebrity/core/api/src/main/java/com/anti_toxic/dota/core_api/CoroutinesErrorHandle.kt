@@ -6,16 +6,10 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 
 
-inline fun <R> safeTry(run: () -> R, catch: (throwable: Throwable) -> R, finally: () -> Unit = {}): R = try {
-    run()
-} catch (throwable: Throwable) {
-    if (throwable is CancellationException) {
-        throw throwable
+fun Exception.rethrowOnCancellation() {
+    if (this is CancellationException) {
+        throw this
     }
-
-    catch(throwable)
-} finally {
-    finally()
 }
 
 suspend fun <T> retryOnNetworkAndServerErrors(

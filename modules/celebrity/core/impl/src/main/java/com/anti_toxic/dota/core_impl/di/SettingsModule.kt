@@ -1,8 +1,11 @@
 package com.anti_toxic.dota.core_impl.di
 
+import android.content.Context
+import android.content.res.Resources
 import com.anti_toxic.dota.core_api.ActualAppDispatchers
 import com.anti_toxic.dota.core_api.AppDispatchers
 import com.anti_toxic.dota.core_api.PreferencesProvider
+import com.anti_toxic.dota.core_api.di.ApplicationContext
 import com.anti_toxic.dota.core_impl.PreferencesProviderImpl
 import dagger.Binds
 import dagger.Module
@@ -26,6 +29,14 @@ interface SettingsModule {
                 prettyPrint = true
                 coerceInputValues = true
             }
+        }
+
+        @Provides
+        @Singleton
+        fun provideResources(
+            @ApplicationContext context: Context
+        ): Resources {
+            return context.resources
         }
     }
 

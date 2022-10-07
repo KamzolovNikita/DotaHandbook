@@ -8,6 +8,21 @@
       android:id="@+id/teams_fragment"
       android:name="com.anti_toxic.dota.teams.list.TeamsListFragment"
       android:label="Teams">
+    <action
+        android:id="@+id/action_teams_fragment_to_team_info_fragment"
+        app:destination="@id/team_info_fragment"
+        app:popUpTo="@id/teams_fragment"
+        app:popUpToInclusive="false">
+    </action>
+  </fragment>
+
+  <fragment
+      android:id="@+id/team_info_fragment"
+      android:name="com.anti_toxic.dota.teams.info.TeamInfoFragment"
+      android:label="Team Info">
+    <argument
+        android:name="team"
+        app:argType="com.anti_toxic.dota.teams.list.data_source.Team" />
   </fragment>
 
 </navigation>

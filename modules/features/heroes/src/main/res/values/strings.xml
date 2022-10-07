@@ -1,0 +1,8 @@
+<resources>
+  <string name="selector_primary_attr_none">None</string>
+  <string name="hint_select_attack_type">Select attack type</string>
+  <string name="hint_select_role">Select role</string>
+  <string name="hint_select_primary_attribute">Select primary attribute</string>
+  <string name="btn_clear_selection">Clear</string>
+  <string name="btn_submit_selection">Submit</string>
+</resources>
